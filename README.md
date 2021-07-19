@@ -10,5 +10,5 @@ What does this file specialize in MASS DESCRIPTION/ENCRYPTION of .SGO and MASS D
  WARNING THIS WILL SLOW DOWN YOUR SYSTEM BECAUSE THE AMMOUNT OF CMD WINDOWS IT OPENS AND USES
 A ISSUE WITH .RAB Microsoft may be retarded and ask you this
 
-https://cdn.discordapp.com/attachments/599213952865665044/866501781529296916/unknown.png
+[![](https://cdn.discordapp.com/attachments/599213952865665044/866501781529296916/unknown.png)]
 
