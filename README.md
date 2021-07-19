@@ -1,4 +1,3 @@
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 SGO-M-RAB--Printer | This file needs four things to work 
 ------------------ | [sgott](https://github.com/zeddidragon/sgott) 
 ------------------ | [EDF Tools](https://gitlab.com/kittopiacreator/edf-tools)
