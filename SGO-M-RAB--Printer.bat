@@ -1,7 +1,7 @@
 @echo off
 setlocal
-set address=":\SteamLibrary\steamapps\common\EARTH DEFENSE FORCE 5\Mods\TOOLS"
-/ Set your path to the EDF 5 game file location
+set address=\SteamLibrary\steamapps\common\EARTH DEFENSE FORCE 5\Mods\TOOLS
+:: Set your path to the EDF 5 game file location
 :list
 echo 1. SGO
 echo 2. Stich SGO
@@ -15,18 +15,17 @@ if %x% == 3 goto m-rab-printer
 if %x% == 4 goto exit
 
 :sgo-printer
-for /r "%CD%" %%a in (*.sgo) do start /d %address% sgott.exe "%%~dpnxa"
+for /r "%CD%" %%a in (*.sgo) do "%address%\sgott.exe" "%%~dpnxa"
 pause
-goto list
+goto exit
 :sgo-sticher
-for /r "%CD%" %%a in (*.json) do start /d %address% sgott.exe "%%~dpnxa"
+for /r "%CD%" %%a in (*.json) do "%address%\sgott.exe" "%%~dpnxa"
 pause
 goto list
 :m-rab-printer
-| for /r "%CD%" %%a in (*.rab) do start /d %address% (link this to a shortcut to EDF Tools.exe).lnk "%%~dpnxa"
-for /r "%CD%" %%a in (*.rab) do start /d %address% "EDF Tools.exe" "%%~dpnxa"
+for /r "%CD%" %%a in (*.rab) do "%address%\EDF Tools.exe" "%%~dpnxa"
 pause
-goto exit
+goto list
 
 pause
 goto list
