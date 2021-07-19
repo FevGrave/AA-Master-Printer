@@ -11,7 +11,7 @@ What does this file specialize in MASS DESCRIPTION/ENCRYPTION of .SGO and MASS D
 WARNING THIS WILL SLOW DOWN YOUR SYSTEM BECAUSE THE AMMOUNT OF CMD WINDOWS IT OPENS AND USES
 
 A ISSUE WITH .RAB, Microsoft may be retarded and ask you this
-There is a way to fix this and that is disabling line 25 and enabling line 26 and replace the (link this to a shortcut to EDF Tools.exe)
+There is a way to fix this and that is disabling line 27 and enabling line 26 and add the link name to a shortcut to the EDF Tools.exe
 
 [![](https://cdn.discordapp.com/attachments/599213952865665044/866501781529296916/unknown.png)]
 
