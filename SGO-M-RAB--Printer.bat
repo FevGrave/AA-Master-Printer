@@ -17,15 +17,16 @@ if %x% == 4 goto exit
 :sgo-printer
 for /r "%CD%" %%a in (*.sgo) do start /d %address% sgott.exe "%%~dpnxa"
 pause
-goto exit
+goto list
 :sgo-sticher
 for /r "%CD%" %%a in (*.json) do start /d %address% sgott.exe "%%~dpnxa"
 pause
 goto list
 :m-rab-printer
+| for /r "%CD%" %%a in (*.rab) do start /d %address% (link this to a shortcut to EDF Tools.exe).lnk "%%~dpnxa"
 for /r "%CD%" %%a in (*.rab) do start /d %address% "EDF Tools.exe" "%%~dpnxa"
 pause
-goto list
+goto exit
 
 pause
 goto list
