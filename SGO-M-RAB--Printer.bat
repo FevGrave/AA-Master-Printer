@@ -23,7 +23,7 @@ for /r "%CD%" %%a in (*.json) do start /d %address% sgott.exe "%%~dpnxa"
 pause
 goto list
 :m-rab-printer
-for /r "%CD%" %%a in (*.rab) do start /d %address% edftools.exe "%%~dpnxa"
+for /r "%CD%" %%a in (*.rab) do start /d %address% "EDF Tools.exe" "%%~dpnxa"
 pause
 goto list
 
