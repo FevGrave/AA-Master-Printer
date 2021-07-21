@@ -7,4 +7,4 @@
 
 What does this file specialize in MASS DESCRIPTION/ENCRYPTION of .SGO and MASS DESCRIPTION of .M(RAB)
 
-WARNING THIS WILL SLOW DOWN YOUR SYSTEM BECAUSE THE AMMOUNT OF CMD WINDOWS IT OPENS AND USES
+May have to keep holding any key to process all M(RAB)'s
