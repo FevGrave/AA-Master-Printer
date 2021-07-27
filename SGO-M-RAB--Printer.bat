@@ -14,6 +14,7 @@ if %x% == 1 goto sgo-printer
 if %x% == 2 goto sgo-sticher
 if %x% == 3 goto m-rab-printer
 if %x% == 4 goto m-rab-sticher
+if %x% == 5 goto exit
 
 :loop
 echo.
