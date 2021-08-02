@@ -8,3 +8,5 @@
 What does this file specialize in MASS DESCRIPTION/ENCRYPTION of .SGO and MASS DESCRIPTION of .M(RAB)
 
 May have to keep holding any key to process all M(RAB)'s
+
+#BULLSHIT CMD MAKER is for the making of BULLSHIT SGO MAKER FOR 4.1
