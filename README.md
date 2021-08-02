@@ -1,4 +1,4 @@
-#SGO-M-RAB--Printer 
+#SGO-M-RAB--Printer WILL NOT WORK FOR 4.1 but RAB CMDS will USE BULLSHIT SGO MAKER FOR 4.1
 
 | WORKHORSE GO BRRRRRRRRRRR | This file needs four things to work |
 | ------ | ------ |
