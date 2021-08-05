@@ -1,4 +1,6 @@
 @echo off
+setlocal
+set address=F:\SteamLibrary\steamapps\common\EARTH DEFENSE FORCE 5\Mods\TOOLS
 :list
 echo 0. FIND THAT GUN
 echo 1. BRRRRRRRRRRRRRRRRRRR
