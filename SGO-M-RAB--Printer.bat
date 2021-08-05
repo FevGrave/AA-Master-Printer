@@ -3,13 +3,15 @@ setlocal
 set address=F:\SteamLibrary\steamapps\common\EARTH DEFENSE FORCE 5\Mods\TOOLS
 :: Set your path to the EDF 5 game file location
 :list
+echo 0. Search for gun
 echo 1. SGO
 echo 2. Stich SGO
 echo 3. M(RAB)
 echo 4. M(RAB) Sticher
 echo 5. Exit Program 
-set /p x=Enter Unpacker file type 
+set /p x=Enter Desired Choice: 
 
+if %x% == 0 goto search
 if %x% == 1 goto sgo-printer
 if %x% == 2 goto sgo-sticher
 if %x% == 3 goto m-rab-printer
@@ -25,6 +27,13 @@ goto loop
 set loop=0
 goto list
 :: Needs to be here or WE GOT A RUNNER
+
+:search
+set /p SEARCH=Name to the gun: 
+echo.
+echo File's that may have this: 
+FINDSTR /I /M %SEARCH% *.json
+goto loop
 
 :sgo-printer
 for /r "%CD%" %%a in (*.sgo) do "%address%\sgott.exe" "%%~dpnxa"
