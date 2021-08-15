@@ -1,6 +1,6 @@
 #SGO-M-RAB--Printer WILL NOT WORK FOR 4.1 but RAB CMDS will work. USE SGO-M(RAB)-Printer-For-4.1.bat
 
-| WORKHORSE GO BRRRRRRRRRRR | This file needs four things to work |
+| WORKHORSE GO BRRRRRRRRRRR | This file needs four things to work fully |
 | ------ | ------ |
 | [sgott](https://github.com/zeddidragon/sgott) | [EDF Tools](https://gitlab.com/kittopiacreator/edf-tools) |
 | Edit the file pathway for this package | New folder in "SteamLibrary\steamapps\common\EARTH DEFENSE FORCE 5\Mods\TOOLS" |
