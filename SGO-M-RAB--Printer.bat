@@ -9,7 +9,7 @@ echo 2. Stich SGO
 echo 3. M(RAB)
 echo 4. M(RAB) Sticher
 echo 5. Exit Program 
-set /p x=Enter Desired Choice: 
+set /p x=Enter Unpacker file type 
 
 if %x% == 0 goto search
 if %x% == 1 goto sgo-printer
@@ -47,6 +47,7 @@ goto loop
 
 :m-rab-printer
 for /r "%CD%" %%a in (*.rab) do "%address%\EDF Tools.exe" "%%~dpnxa"
+for /r "%CD%" %%a in (*.mrab) do "%address%\EDF Tools.exe" "%%~dpnxa"
 echo Decrypting done . . . at: & time /t
 goto loop
 
