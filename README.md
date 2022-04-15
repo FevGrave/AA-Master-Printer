@@ -1,6 +1,6 @@
 #A-Master-Printer WILL NOT WORK FOR 4.1 but RAB CMDS will work. USE A-Master-Printer-4.1.bat
 
-| WORKHORSE GO BRRRRRRRRRRR | This file needs most of everything on this list https://github.com/KCreator/Earth-Defence-Force-Documentation/wiki/Tools things to work fully |
+| WORKHORSE GO BRRRRRRRRRRR | This file needs most of everything on this list https://github.com/KCreator/Earth-Defence-Force-Documentation/wiki/Tools to work fully |
 | ------ | ------ |
 | [sgott](https://github.com/zeddidragon/sgott) | [EDF Tools](https://gitlab.com/kittopiacreator/edf-tools/-/tree/master/Release) |
 | [Stafern's Map Modification Tool](https://www.moddb.com/mods/edf41-mod-map-modification-sample-mission) | [mp-s's edftools](https://github.com/mp-s/edftools) |
