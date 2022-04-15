@@ -2,10 +2,9 @@
 
 | WORKHORSE GO BRRRRRRRRRRR | This file needs most of everything on this list https://github.com/KCreator/Earth-Defence-Force-Documentation/wiki/Tools to work fully |
 | ------ | ------ |
-| [sgott](https://github.com/zeddidragon/sgott) | [EDF Tools](https://gitlab.com/kittopiacreator/edf-tools/-/tree/master/Release) |
-| [Stafern's Map Modification Tool](https://www.moddb.com/mods/edf41-mod-map-modification-sample-mission) | [mp-s's edftools](https://github.com/mp-s/edftools) |
-| [Aelbannan's Direct SGO Editor](https://github.com/Aelbannan/edf-mod-tool/) | [EAT](https://animegamemods.freeforums.net/thread/618/eternity-audio-tool-link-tutorial) |
 | Edit the file pathway for this package | New folder in "SteamLibrary\steamapps\common\EARTH DEFENSE FORCE 5\Mods\TOOLS" |
+
+![image](https://user-images.githubusercontent.com/19373020/163498605-19f036e1-f2c8-4c8e-8d41-66cb81874ded.png)
 
 What does this file is basicly a packaged warhead that spiders out to have quick work flow when editing and file type
 
