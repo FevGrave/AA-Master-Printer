@@ -1,8 +1,8 @@
 @echo off
-setlocal
+setlocal enabledelayedexpansion
 set address=F:\SteamLibrary\steamapps\common\EARTH DEFENSE FORCE 5\Mods\TOOLS
 :: Set your path to the EDF 5 game file location
-echo V .311 A-Master-Printer
+echo V .320 A-Master-Printer
 
 :list
 echo 0. Search for gun name in json
@@ -16,8 +16,8 @@ echo 7. AWB and AWE
 echo 8. ACB
 echo 9. RMPA and BVM (sf)
 echo 10. MAC
-echo 69. Exit Program 
-set /p x=Enter Unpacker file type 
+echo 11. Exit Program 
+set /p x=Enter Unpacker file type as a number 
 
 if %x% == 0 goto search
 if %x% == 1 goto sgo-printer
@@ -43,7 +43,7 @@ goto list
 :: Needs to be here or WE GOT A RUNNER
 
 :search
-set /p SEARCH=Name to the gun: 
+set /p SEARCH=Name to the gun or equipment: 
 echo.
 echo File's that may have this: 
 FINDSTR /I /M %SEARCH% *.json
@@ -55,29 +55,29 @@ echo Decrypting done . . . at: & time /t
 goto loop
 
 :sgo-stitcher
-for /r "%CD%" %%a in (*.json) do "%address%\sgott.exe" "%%~dpnxa"
+java for /r "%CD%" %%a in (*.json) do "%address%\sgott.exe" "%%~dpnxa"
 echo Encrypting done . . . at: & time /t
 goto loop
 
 :sgo-editor
 echo Opening SGO editor
-"%address%\edf-mod-tool.exe" "%%~dpnxa"
+"%address%\Aelbannan's Direct SGO Editor\edf-mod-tool.exe" "%%~dpnxa"
 goto loop
 
 :m-rab-printerS
 set /p cf=Enter file name: 
-"%address%\EDF Tools.exe" %cf% "%%~dpnxa"
+"%address%\Unnamed EDF Tool\Release\EDF Tools.exe" %cf% "%%~dpnxa"
 echo Decrypting done . . . at: & time /t
 goto loop
 
 :m-rab-printer
-for /r "%CD%" %%a in (*.rab, *.mrab) do "%address%\EDF Tools.exe" "%%~dpnxa"
+for /r "%CD%" %%a in (*.rab, *.mrab) do "%address%\Unnamed EDF Tool\Release\EDF Tools.exe" "%%~dpnxa"
 echo Decrypting done . . . at: & time /t
 goto loop
 
 :m-rab-stitcher
 set /p cf=Enter file name: 
-"%address%\EDF Tools.exe" /ARCHIVE %cf% "%%~dpnxa"
+"%address%\Unnamed EDF Tool\Release\EDF Tools.exe" /ARCHIVE %cf% "%%~dpnxa"
 echo Encrypting done . . . at: & time /t
 echo.
 set /p c=Do you have another file to be Archived (Y/N)?: 
@@ -86,17 +86,17 @@ goto m-rab-stitcher
 
 :AW~
 echo Opening Python Script : To go back, press enter 3 times
-python "%address%\awe_parser.py" "%%~dpnxa"
+python "%address%\Another EDF Tools\awe_parser.py" "%%~dpnxa"
+goto loop
+
+:RMPABVM
+python "%address%\Another EDF Tools\mission_tools.py"
 goto loop
 
 :ACB
 set /p cf=Enter file name: 
 echo Opening EAT : To go back, Close and reopen this file
-"%address%\eternity_audio_tool.exe" %cf% "%%~dpnxa" goto loop
-
-:RMPABVM
-python "%address%\mission_tools.py"
-goto loop
+"%address%\EAT\eternity_audio_tool.exe" %cf% "%%~dpnxa" goto loop
 
 :MAC
 echo Opening Map editor : To go back, Close and reopen this file
