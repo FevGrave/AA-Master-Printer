@@ -9,5 +9,4 @@
 What this file does is basicly a packaged warhead that spiders out to have quick work flow when editing and for any file types that is susported
 
 ### RECOMENDED TOOLS FOLDER SETUP LOOKS LIKE THIS!
-
-[image](https://user-images.githubusercontent.com/19373020/171080815-e65fa5f4-6679-41bd-a836-41adcc3bdb19.png)
+![image](https://user-images.githubusercontent.com/19373020/171080815-e65fa5f4-6679-41bd-a836-41adcc3bdb19.png)
