@@ -6,8 +6,8 @@
 
 ![image](https://user-images.githubusercontent.com/19373020/163498605-19f036e1-f2c8-4c8e-8d41-66cb81874ded.png)
 
-What does this file is basicly a packaged warhead that spiders out to have quick work flow when editing and file type
+What this file does is basicly a packaged warhead that spiders out to have quick work flow when editing and for any file types that is susported
 
-Will have to keep holding any key to process all M(RAB)'s
+### RECOMENDED TOOLS FOLDER SETUP LOOKS LIKE THIS!
 
-#CMD MAKER is for the making of A-Master-Printer-4.1.bat
+[image](https://user-images.githubusercontent.com/19373020/171080815-e65fa5f4-6679-41bd-a836-41adcc3bdb19.png)
