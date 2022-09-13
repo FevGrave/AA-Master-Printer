@@ -1,10 +1,9 @@
 ## DOWNLOAD LINK
 https://github.com/FevGrave/SGO-M-RAB--Printer/releases/tag/1.0.343.14.2/TOOLS-1.0.343.14.2.zip
 
-#REQUIERMENTS
-Any text editor
-Python 3 = https://www.python.org/downloads/
-#EXTRA FUNTIONS REQUIERMENTS
+##REQUIERMENTS
+Any text editor & Python 3 = https://www.python.org/downloads/
+##EXTRA FUNTIONS REQUIERMENTS
 Imagemagik  DDS TO EXR & VICEVERSA SCRIPT = https://imagemagick.org/script/download.php
 
 
