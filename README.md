@@ -4,6 +4,7 @@ https://github.com/FevGrave/SGO-M-RAB--Printer/releases/tag/1.0.343.15.1/TOOLS1.
 ## REQUIERMENTS
 Any text editor
 Python 3 = https://www.python.org/downloads/
+
 The ability to Read
 
 ## EXTRA FUNTIONS REQUIERMENTS
