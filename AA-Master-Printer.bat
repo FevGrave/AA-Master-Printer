@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-TITLE V 1.0.343.14.2 --- A-Master-Printer --- by FevGrave#5156
+TITLE V 1.0.343.15.1 --- A-Master-Printer --- by FevGrave#5156
 
 color 0A
 set address=F:\SteamLibrary\steamapps\common\EARTH DEFENSE FORCE 5\Mods\TOOLS
@@ -13,7 +13,7 @@ echo -1. Exit Program                        - Close this application
 echo 0. (SGO) Options                        - Object Behavior Files (ie guns, and other stuff)
 echo 1. M(RAB) Options                       - Model ^& Textures
 echo 2. (RMPA) (BVM) (MAC) Options           - Missions files ^& Map Layout Editor
-echo 3. (ACB) (AWE) (AWB) Options            - Audio Extration ^& Replacement
+echo 3. (ACB) (AWE) (AWB) Options            - Audio Extraction ^& Replacement
 echo 4. UE AES Keys                          - Keys ^& Info to get in UE-based games
 echo.
 set a=0
@@ -73,11 +73,11 @@ if %x% GEQ 9 goto invalid
 echo -1. Exit Program                        - Close this application
 echo 0. Go back to starting menu             - Go Back
 echo 1. M(RAB) Open Single Folder            - Model ^& Textures
-echo 2. M(RAB) Press-Hold Any key if used    - Model ^& Textures (Every file will be opended to a exporible folder)
+echo 2. M(RAB) Press-Hold Any key if used    - Model ^& Textures (Every file will be opened to an explorable folder)
 echo 3. M(RAB) Stitch Single Folder          - Model ^& Textures
 echo 4. (DDS) TO (EXR)                       - Converting Script
 echo 5. (EXR) TO (DDS)                       - Converting Script
-echo 6. I just need PNGS                     - Not recomended for modding (Some will be green while everything else is white)
+echo 6. I just need PNGS                     - Not recommended for modding (Some will be green while everything else is white)
 echo 7. Print Map Notes
 set a=2
 set x=69420
@@ -300,8 +300,8 @@ echo old_name-of-file.mdb              old structures?
 echo obj_name-of-file.mdb              Small objects?
 echo yy                                ?
 echo ym                                ?
-echo.
-echo --EDF 5--
+echo.                                  
+echo --EDF 5--                         
 echo app:/Map/IG_2000MCity.mac         Very large city of skyscrapers.
 echo app:/Map/IG_Base502.mac           EDF base exterior in the grassy mountains.
 echo app:/Map/IG_Cave501.mac           "fine" weather only. Standard cave map.
@@ -325,8 +325,8 @@ echo app:/Map/NW_Suiden.mac            Large stretch of rice paddy fields.
 echo app:/Map/NW_TrainCity.mac         Skyscraper city divided by a line of many train tracks.
 echo app:/Map/IG_TestLightMap.mac      Resource-light, somewhat empty test city. Same one as 4.1's.
 echo app:/Map/IG_Test_BlueFld.mac      "fine" weather only. Same blank map as 4.1's.
-echo.
-echo --EDF 4.1--
+echo.                                  
+echo --EDF 4.1--                       
 echo app:/Map/NW_HillyCity_Light.mac   City with train station, construction sites, and tennis courts.
 echo app:/Map/NW_Kasenjiki01.mac       Very long residential area with a riverbed.
 echo app:/Map/NW_KousouBld01.mac       High-rise district with a park.
@@ -389,10 +389,15 @@ python "%address%\Another EDF Tools\awe_parser.py" "%%~dpnxa"
 goto loop
 
 :ACB
-set /p cf=Enter file name: 
-echo Opening EAT : To go back, Close and reopen this file
-"%address%\EAT\eternity_audio_tool.exe" %cf% "%%~dpnxa"
-goto loop
+if exist "%address%\EAT\eternity_audio_tool.exe" (
+    set /p cf=Enter file name: 
+    echo Opening EAT : To go back, Close and reopen this file
+    "%address%\EAT\eternity_audio_tool.exe" %cf% "%%~dpnxa"
+    goto loop
+)
+    echo EAT is not detected . . . You will need to choose what version of EAT you want to unpack please go to this drive address
+    echo "%address%\EAT\"
+    goto loop
 
 :sound-notes
 
@@ -419,16 +424,16 @@ echo And textures could be any option below (FYI EVERY IMAGE IMPORTED INTO BLEND
 echo (TGA Uncompressed) Biggest, with good alpha layer,  (But why????????)
 echo (TGA)              Bigger, with a good alpha layer, (Recommend)
 echo (PNG)              Smaller, Poor alpha layer,       (Recommended)
-echo (DDS)              Smallest, "VG" compression,      (Blender DOES NOT SUPPORT DDS)  {IT BE NICE IF SOMEONE ADD SUSPORT}
+echo (DDS)              Smallest, "VG" compression,      (Blender DOES NOT SUPPORT DDS convert them to EXR(its included in this file))
 echo.
-echo Game                 ^|UE_Version                      ^|AES keys
-echo ---------------------^|--------------------------------^|---------------------------------------------------------------------
-echo EDF:IR               ^|{4.19}                          ^|0xCF812E306958EF92C90EA4F251994FE747306B7B666940FBE2ED711139EDB65E
-echo ---------------------^|--------------------------------^|---------------------------------------------------------------------
-echo EDF:WB               ^|{4.24}                          ^|0x4055102382008C1D820548683D055CC84B03164B43EDF64A80629B384A4D8DA4
-echo ---------------------^|--------------------------------^|---------------------------------------------------------------------
-echo EDF:HQ               ^|                                ^|TO SAVE OUR MOTHER EARTH FROM ANY ALIEN ATTACK
-echo ---------------------^|--------------------------------^|---------------------------------------------------------------------
+echo Game                 ^|UE_Version                      ^|AES keys                                                             ^|
+echo ---------------------^|--------------------------------^|---------------------------------------------------------------------^|
+echo EDF:IR               ^|{4.19}                          ^|0xCF812E306958EF92C90EA4F251994FE747306B7B666940FBE2ED711139EDB65E   ^|
+echo ---------------------^|--------------------------------^|---------------------------------------------------------------------^|
+echo EDF:WB               ^|{4.24}                          ^|0x4055102382008C1D820548683D055CC84B03164B43EDF64A80629B384A4D8DA4   ^|
+echo ---------------------^|--------------------------------^|---------------------------------------------------------------------^|
+echo EDF:HQ               ^|                                ^|TO SAVE OUR MOTHER EARTH FROM ANY ALIEN ATTACK                       ^|
+echo ---------------------^|--------------------------------^|---------------------------------------------------------------------^|
 echo. 
 echo If you have an account on zenhax, can you go to this link "https://zenhax.com/viewtopic.php?f=9&t=1005" and post these two
 echo AES keys above to add support on the Unreal Engine 4 pak-file Unpacker by Haoose, thanks in advance.
