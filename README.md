@@ -49,7 +49,7 @@ AA-Master-Printer.bat has been updated with the changes, and this "AA-Master-Pri
 
 
 
-CREDITS TO THE TOOL CREATORS WITH NOTES THEY NEED HELP WITH
+## CREDITS TO THE TOOL CREATORS WITH NOTES THEY NEED HELP WITH
 
 
 aelbannan#1388           - Aelbannans Direct SGO Editor                          
