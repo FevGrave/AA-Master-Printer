@@ -7,6 +7,7 @@ The ability to Read
 
 ## EXTRA FUNTIONS REQUIERMENTS
 7-Zip or Equililent Zip File Program = https://www.7-zip.org/download.html
+For unpacking either Stable or Beta vertions of E.A.T. 
 
 Imagemagik = https://imagemagick.org/script/download.php
 For these CMDs "EXR TO DDS" and "Convert to any image type" script
