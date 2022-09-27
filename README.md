@@ -1,11 +1,11 @@
-REQUIERMENTS
+## REQUIERMENTS
 Any text editor
 
 Python 3 = https://www.python.org/downloads/
 
 The ability to Read
 
-EXTRA FUNTIONS REQUIERMENTS
+## EXTRA FUNTIONS REQUIERMENTS
 7-Zip or Equililent Zip File Program = https://www.7-zip.org/download.html
 
 Imagemagik = https://imagemagick.org/script/download.php
