@@ -1,29 +1,47 @@
-# DOWNLOAD LINK
-https://github.com/FevGrave/SGO-M-RAB--Printer/releases/tag/1.0.343.15.1/TOOLS1.0.343.15.1.zip
-
-## REQUIERMENTS
+REQUIERMENTS
 Any text editor
+
 Python 3 = https://www.python.org/downloads/
 
 The ability to Read
 
-## EXTRA FUNTIONS REQUIERMENTS
-7-Zip = https://www.7-zip.org/download.html
-or equililent zip program
+EXTRA FUNTIONS REQUIERMENTS
+7-Zip or Equililent Zip File Program = https://www.7-zip.org/download.html
 
 Imagemagik = https://imagemagick.org/script/download.php
-For these CMDs DDS TO EXR & VICEVERSA SCRIPT, convert to any script
+For these CMDs "EXR TO DDS" and "Convert to any image type" script
+
+Foobar2000
+https://www.foobar2000.org/download
 
 
-Hello, Future modder
-You will need to get either CPK extractors that is listed here. to crack open the CPKs at the root install folder for EDF 4.1 or 5
-https://github.com/Brolijah/YACpkTool
-https://github.com/wmltogether/CriPakTools
+
+## Hello, Future modder
+You will need to get [BlueAmulet's Mod Loader](https://github.com/BlueAmulet/EDF5ModLoader) and then get either CPK extractors that is listed here. to crack open the CPKs at the root install folder for EDF 4.1 or 5
+[CriPakTools](https://github.com/wmltogether/CriPakTools): CPK extractor with a GUI.
+[YACPKTool](https://github.com/Brolijah/YACpkTool): Drag and drop CPK extractor.
 
 After this the first thing you will need to do is to edit the AA-UserSettings-Porter.txt file to keep your preferred setting to apply to 
-the newer vertions of AA-Master-Printer.bat. the only thing you can edit with out issue is between the single quotes 'I'm a example!'
+the newer vertions of AA-Master-Printer.bat. the only thing you can edit with out issue is between the single quotes 'A example!'
 Once done editing the txt file you will save the changes. Then double click the AB-Python-Script-Runner.bat to run it, after this
-AA-Master-Printer.bat has been updated with the changes, and this file can be copied about, to anywhere that you want to mod
+AA-Master-Printer.bat has been updated with the changes, and this "AA-Master-Printer.bat" file can be copied about, to anywhere that you want to start moding the game
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -52,7 +70,7 @@ Big Racer#2799           - Maker of Big Racer's Weapon Builder
                                  - Firing animations
                                  - Use-underground is actually for audio stuff not the actual variable to spawn underground
    
-BlueAmulet#0168          - Contributions to EDF Tools, & AA-Master-Printer          
+BlueAmulet#0168          - Contributions to EDF Tools, & AA-Master-Printer.bat          
 
 FevGrave#5156            - Maker of AA-Master-Printer.bat, AB-Python-Script-Runner.bat, AA-UserSettings-Porter.txt,
                            & Who wrote this (Read Me.txt) out.
@@ -68,6 +86,8 @@ stafern#3341             - Maker of MACfileTool
                            information on the wiki. I am hoping that someday someone with more knowledge will make a proper one
                            that works with Blender, etc."
 
+ゆづる#3689 A.K.A. Lizard  - Maker of Direct RAB editor
+
 Zeddy#6581               - Maker of Sgott
 
 ??????NO PERMISION YET REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
@@ -79,7 +99,4 @@ eterniti A.K.A. eternity - Maker of E.A.T.
                            I have attempted to reach out for contact but this website https://videogamemods.com/xenoverse/register/
                            is not allowing me to create a account
                          - HAS YET TO SUPPORT HIS E.A.T. PACKAGE ON HIS GITHUB https://github.com/eterniti
-      I Had to rename the zips
-            Eternity Audio Tool 0.91           is now EternityAudioTool91.rar
-            Eternity Audio Tool 1.0beta1       is now EternityAudioTool10beta1.rar
 ??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
