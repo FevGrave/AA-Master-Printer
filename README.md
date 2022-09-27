@@ -18,8 +18,8 @@ https://www.foobar2000.org/download
 
 ## Hello, Future modder
 You will need to get [BlueAmulet's Mod Loader](https://github.com/BlueAmulet/EDF5ModLoader) and then get either CPK extractors that is listed here. to crack open the CPKs at the root install folder for EDF 4.1 or 5
-[CriPakTools](https://github.com/wmltogether/CriPakTools): CPK extractor with a GUI.
-[YACPKTool](https://github.com/Brolijah/YACpkTool): Drag and drop CPK extractor.
+* [CriPakTools](https://github.com/wmltogether/CriPakTools): CPK extractor with a GUI.
+* [YACPKTool](https://github.com/Brolijah/YACpkTool): Drag and drop CPK extractor.
 
 After this the first thing you will need to do is to edit the AA-UserSettings-Porter.txt file to keep your preferred setting to apply to 
 the newer vertions of AA-Master-Printer.bat. the only thing you can edit with out issue is between the single quotes 'A example!'
