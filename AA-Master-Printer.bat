@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-TITLE V 1.0.343.15.1 --- A-Master-Printer --- by FevGrave#5156
+TITLE V 1.0.343.15.5 --- A-Master-Printer --- by FevGrave#5156
 
 color 0A
 set address=F:\SteamLibrary\steamapps\common\EARTH DEFENSE FORCE 5\Mods\TOOLS
@@ -14,7 +14,8 @@ echo 0. (SGO) Options                        - Object Behavior Files (ie guns, a
 echo 1. M(RAB) Options                       - Model ^& Textures
 echo 2. (RMPA) (BVM) (MAC) Options           - Missions files ^& Map Layout Editor
 echo 3. (ACB) (AWE) (AWB) Options            - Audio Extraction ^& Replacement
-echo 4. UE AES Keys                          - Keys ^& Info to get in UE-based games
+echo 4. Specialty One Window Editors         - For Quick Access Tools
+echo 5. UE AES Keys                          - Keys ^& Info to get in UE-based games
 echo.
 set a=0
 set x=69420
@@ -30,8 +31,9 @@ if %x% == 0 goto listSGO
 if %x% == 1 goto listm-rab
 if %x% == 2 goto listRMPABVMMAC
 if %x% == 3 goto listAudio
-if %x% == 4 goto UE-keys
-if %x% GEQ 5 goto invalid
+if %x% == 4 goto listALLinONE
+if %x% == 5 goto UE-keys
+if %x% GEQ 6 goto invalid
 
 ::=================================================================
 
@@ -42,7 +44,7 @@ echo 1. Search for any gun name in (JSON)    - Find that gun
 echo 2. (SGO) TO (JSON)                      - Converting Script
 echo 3. (JSON) TO (SGO)                      - Converting Script
 echo 4. Edit (SGO)                           - SGO Editor
-echo 5. Build a gun                          - Build a bear, but it has a gun
+echo 5. Build a gun with a GUI               - Big Racer's Weapon Builder
 echo 6. (SGO) documentation
 echo 7. 4.1's Weapon List
 echo 8. 5's Weapon List
@@ -75,9 +77,9 @@ echo 0. Go back to starting menu             - Go Back
 echo 1. M(RAB) Open Single Folder            - Model ^& Textures
 echo 2. M(RAB) Press-Hold Any key if used    - Model ^& Textures (Every file will be opened to an explorable folder)
 echo 3. M(RAB) Stitch Single Folder          - Model ^& Textures
-echo 4. (DDS) TO (EXR)                       - Converting Script
+echo 4. Edit M(RAB)                          - Direct RAB editor
 echo 5. (EXR) TO (DDS)                       - Converting Script
-echo 6. I just need PNGS                     - Not recommended for modding (Some will be green while everything else is white)
+echo 6. I just need images in a format       - Recommended format for modding (EXR) {I'm BUGGY / "slow" on some stuff}
 echo 7. Print Map Notes
 set a=2
 set x=69420
@@ -93,9 +95,9 @@ if %x% == 0 goto list
 if %x% == 1 goto m-rab-printerSf
 if %x% == 2 goto m-rab-printer
 if %x% == 3 goto m-rab-stitcher
-if %x% == 4 goto exr-printer
+if %x% == 4 goto rab-editor
 if %x% == 5 goto dds-printer
-if %x% == 6 goto png-printer
+if %x% == 6 goto image-printer
 if %x% == 7 goto m-notes
 if %x% GEQ 8 goto invalid
 
@@ -106,10 +108,12 @@ echo -1. Exit Program                        - Close this application
 echo 0. Go back to starting menu             - Go Back
 echo 1. (RMPA) ^& (BVM) TO (JSON) ^& (ASM)     - Converting Script
 echo 2. (JSON) ^& (ASM) TO (RMPA) ^& (BVM)     - Converting Script
-echo 3. Print Useful addresses For (BVM-ASM)    
-echo 4. (MAC)                                - Map Layout Editor
-echo 5. (BVM) documentation
-echo 6. (RMPA) documentation
+echo 3. (BVM) TO (TXT)                       - BVM Builder Script
+echo 4. (TXT) TO (BVM)                       - BVM Builder Script
+echo 5. Print Useful Addresses Notes For (BVM-ASM)    
+echo 6. (MAC)                                - Map Layout Editor
+echo 7. (BVM) documentation
+echo 8. (RMPA) documentation
 set a=3
 set x=69420
 set /p x=Enter a number to mess with that file type: 
@@ -123,11 +127,13 @@ if %x% == -1 goto exit
 if %x% == 0 goto list
 if %x% == 1 goto RMPABVM
 if %x% == 2 goto JsonAsm
-if %x% == 3 goto addresses
-if %x% == 4 goto MAC
-if %x% == 5 goto BVMdoc
-if %x% == 6 goto RMPAdoc
-if %x% GEQ 7 goto invalid
+if %x% == 3 goto bvmtxt
+if %x% == 4 goto txtbvm
+if %x% == 5 goto addresses
+if %x% == 6 goto MAC
+if %x% == 7 goto BVMdoc
+if %x% == 8 goto RMPAdoc
+if %x% GEQ 9 goto invalid
 
 
 ::=================================================================
@@ -135,7 +141,7 @@ if %x% GEQ 7 goto invalid
 :listAudio
 echo -1. Exit Program                        - Close this application
 echo 0. Go back to starting menu             - Go Back
-echo 1. (AWB) ^& (AWE)                        - Audio (Another EDF Tools)
+echo 1. (AWB) ^& (AWE)                        - Audio (Another EDF Tools) {BROKEN, but works for 5}
 echo 2. (ACB)                                - Audio (E.A.T.)
 set a=4
 set x=69420
@@ -154,6 +160,32 @@ if %x% GEQ 3 goto invalid
 
 ::=================================================================
 
+:listALLinONE
+echo -1. Exit Program                        - Close this application
+echo 0. Go back to starting menu             - Go Back
+echo 1. Edit (SGO)                           - SGO Editor
+echo 2. Build a gun with a GUI               - Big Racer's Weapon Builder
+echo 3. (ACB)                                - Audio (E.A.T.)
+echo 4. Edit M(RAB)                          - Direct RAB editor
+set a=5
+set x=69420
+set /p x=Enter a number to mess with that file type: 
+echo.
+echo.
+echo.
+echo.
+echo.
+
+if %x% == -1 goto exit
+if %x% == 0 goto list
+if %x% == 1 goto sgo-editor
+if %x% == 2 goto buildAgun
+if %x% == 3 goto ACB
+if %x% == 4 goto rab-editor
+if %x% GEQ 5 goto invalid
+
+::=================================================================
+
 :invalid
 echo.
 echo Needs To Be An Actual Input                                                                     -STOP
@@ -167,6 +199,7 @@ if %a% == 1 goto listSGO
 if %a% == 2 goto listm-rab
 if %a% == 3 goto listRMAPBVMMAC
 if %a% == 4 goto listAudio
+if %a% == 5 goto listALLinONE
 
 ::=================================================================
 
@@ -184,6 +217,7 @@ if %b% == 1 goto listSGO
 if %b% == 2 goto listm-rab
 if %b% == 3 goto listRMAPBVMMAC
 if %b% == 4 goto listAudio
+if %b% == 5 goto listALLinONE
 
 ::=================================================================
 
@@ -257,9 +291,9 @@ set /p c=Do you have another file to be Archived (Y/N)?:
 IF /I "%c%" NEQ "Y" GOTO loop
 goto m-rab-stitcher
 
-:exr-printer
-for /r "%CD%" %%a in (*.dds) do magick mogrify -format exr *.dds
-echo Decrypting done . . . at: & time /t
+:rab-editor
+echo comming soon
+:: "%address%\Direct RAB editor\Direct RAB editor.exe"
 goto loop
 
 :dds-printer
@@ -267,8 +301,11 @@ for /r "%CD%" %%a in (*.exr) do magick mogrify -format dds *.exr
 echo Decrypting done . . . at: & time /t
 goto loop
 
-:png-printer
-for /r "%CD%" %%a in (*.dds) do magick mogrify -format png *.dds
+:image-printer
+echo Supported Formats = http://imagemagick.sourceforge.net/http/www/formats.html
+set /p cf=Expoting to which file type?: 
+for /r "%CD%" %%a in (*.dds) do magick mogrify -format %cf% *.dds
+@DEL *~*
 echo Decrypting done . . . at: & time /t
 goto loop
 
@@ -355,6 +392,14 @@ goto loop
 
 :JsonAsm
 for /r "%CD%" %%a in (*.json, *.asm) do "%address%\mission_tools_1.62.exe" "%%~dpnxa"
+goto loop
+
+:bvmtxt
+for /r "%CD%" %%a in (*.bvm) do "%address%\BVM_Builder\EDF Tools_22H301.exe" "%%~dpnxa"
+goto loop
+
+:txtbvm
+for /r "%CD%" %%a in (*.txt) do "%address%\BVM_Builder\EDF Tools_22H301.exe" "%%~dpnxa"
 goto loop
 
 :addresses
