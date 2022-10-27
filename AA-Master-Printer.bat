@@ -1,6 +1,8 @@
 @echo off
 setlocal enabledelayedexpansion
-TITLE V 1.0.343.15.5 --- A-Master-Printer --- by FevGrave#5156
+TITLE V 1.0.343.15.9 --- A-Master-Printer --- by FevGrave#5156 --- %time%
+
+::=================================================================
 
 color 0A
 set address=F:\SteamLibrary\steamapps\common\EARTH DEFENSE FORCE 5\Mods\TOOLS
@@ -33,6 +35,7 @@ if %x% == 2 goto listRMPABVMMAC
 if %x% == 3 goto listAudio
 if %x% == 4 goto listALLinONE
 if %x% == 5 goto UE-keys
+if %x% == EGG goto EGG
 if %x% GEQ 6 goto invalid
 
 ::=================================================================
@@ -81,6 +84,7 @@ echo 4. Edit M(RAB)                          - Direct RAB editor
 echo 5. (EXR) TO (DDS)                       - Converting Script
 echo 6. I just need images in a format       - Recommended format for modding (EXR) {I'm BUGGY / "slow" on some stuff}
 echo 7. Print Map Notes
+echo 8. Blender MDB plugin
 set a=2
 set x=69420
 set /p x=Enter a number to mess with that file type: 
@@ -99,7 +103,8 @@ if %x% == 4 goto rab-editor
 if %x% == 5 goto dds-printer
 if %x% == 6 goto image-printer
 if %x% == 7 goto m-notes
-if %x% GEQ 8 goto invalid
+if %x% == 8 goto MDBp
+if %x% GEQ 9 goto invalid
 
 ::=================================================================
 
@@ -112,8 +117,10 @@ echo 3. (BVM) TO (TXT)                       - BVM Builder Script
 echo 4. (TXT) TO (BVM)                       - BVM Builder Script
 echo 5. Print Useful Addresses Notes For (BVM-ASM)    
 echo 6. (MAC)                                - Map Layout Editor
-echo 7. (BVM) documentation
-echo 8. (RMPA) documentation
+echo 7. (MAC) Viewer                         - View the maps in a 3D space 
+echo 8. Mission Editor Viewer                - Mission Editor
+echo 9. (BVM) documentation
+echo 10. (RMPA) documentation
 set a=3
 set x=69420
 set /p x=Enter a number to mess with that file type: 
@@ -131,9 +138,11 @@ if %x% == 3 goto bvmtxt
 if %x% == 4 goto txtbvm
 if %x% == 5 goto addresses
 if %x% == 6 goto MAC
-if %x% == 7 goto BVMdoc
-if %x% == 8 goto RMPAdoc
-if %x% GEQ 9 goto invalid
+if %x% == 7 goto MACVIEW
+if %x% == 8 goto MissionEditor
+if %x% == 9 goto BVMdoc
+if %x% == 10 goto RMPAdoc
+if %x% GEQ 11 goto invalid
 
 
 ::=================================================================
@@ -339,49 +348,54 @@ echo yy                                ?
 echo ym                                ?
 echo.                                  
 echo --EDF 5--                         
-echo app:/Map/IG_2000MCity.mac         Very large city of skyscrapers.
-echo app:/Map/IG_Base502.mac           EDF base exterior in the grassy mountains.
-echo app:/Map/IG_Cave501.mac           "fine" weather only. Standard cave map.
-echo app:/Map/IG_Cave503.mac           "fine" weather only. Cave with a large room of many interconnections(?).
-echo app:/Map/IG_Cave504.mac           "fine" weather only. Cave featuring a high ceiling area.
-echo app:/Map/IG_Kaigan502.mac         Map of the mountainous coast.
-echo app:/Map/IG_Sangaku506.mac        Map of the mountain area.
-echo app:/Map/IG_Heigen507.mac         Map of the grassy plains.
-echo app:/Map/IG_Desert508.mac         EDF base exterior in the desert.
-echo app:/Map/IG_EDFRoom01.mac         "fine" weather only. EDF base interior.
-echo app:/Map/IG_EDFRoom02.mac         "fine" weather only. EDF base interior with built-in ant tunnel exits (is this in both?).
-echo app:/Map/NG_DLC_EDFRoom03.mac     "fine" weather only. EDF base interior with a looping area.
-echo app:/Map/NW_Danti01.mac           Long residential city with apartment complexes.
-echo app:/Map/NW_Europe01.mac          European city.
-echo app:/Map/NW_Henden.mac            Residential rice farm town.
-echo app:/Map/NW_JyousuiCity.mac       City with a small water park and a water-processing plant.
-echo app:/Map/NW_KitaguniCity.mac      City featuring the Yahoro Station.
-echo app:/Map/NW_Seiyu.mac             Map of a large factory.
-echo app:/Map/NW_Seiyu_Night.mac       "night" weather only. Same factory map as Seiyu, but with many lights.
-echo app:/Map/NW_Suiden.mac            Large stretch of rice paddy fields.
-echo app:/Map/NW_TrainCity.mac         Skyscraper city divided by a line of many train tracks.
-echo app:/Map/IG_TestLightMap.mac      Resource-light, somewhat empty test city. Same one as 4.1's.
-echo app:/Map/IG_Test_BlueFld.mac      "fine" weather only. Same blank map as 4.1's.
+echo /Map/IG_2000MCity.mac         Very large city of skyscrapers.
+echo /Map/IG_Base502.mac           EDF base exterior in the grassy mountains.
+echo /Map/IG_Cave501.mac           "fine" weather only. Standard cave map.
+echo /Map/IG_Cave503.mac           "fine" weather only. Cave with a large room of many interconnections(?).
+echo /Map/IG_Cave504.mac           "fine" weather only. Cave featuring a high ceiling area.
+echo /Map/IG_Kaigan502.mac         Map of the mountainous coast.
+echo /Map/IG_Sangaku506.mac        Map of the mountain area.
+echo /Map/IG_Heigen507.mac         Map of the grassy plains.
+echo /Map/IG_Desert508.mac         EDF base exterior in the desert.
+echo /Map/IG_EDFRoom01.mac         "fine" weather only. EDF base interior.
+echo /Map/IG_EDFRoom02.mac         "fine" weather only. EDF base interior with built-in ant tunnel exits (is this in both?).
+echo /Map/NG_DLC_EDFRoom03.mac     "fine" weather only. EDF base interior with a looping area.
+echo /Map/NW_Danti01.mac           Long residential city with apartment complexes.
+echo /Map/NW_Europe01.mac          European city.
+echo /Map/NW_Henden.mac            Residential rice farm town.
+echo /Map/NW_JyousuiCity.mac       City with a small water park and a water-processing plant.
+echo /Map/NW_KitaguniCity.mac      City featuring the Yahoro Station.
+echo /Map/NW_Seiyu.mac             Map of a large factory.
+echo /Map/NW_Seiyu_Night.mac       "night" weather only. Same factory map as Seiyu, but with many lights.
+echo /Map/NW_Suiden.mac            Large stretch of rice paddy fields.
+echo /Map/NW_TrainCity.mac         Skyscraper city divided by a line of many train tracks.
+echo /Map/IG_TestLightMap.mac      Resource-light, somewhat empty test city. Same one as 4.1's.
+echo /Map/IG_Test_BlueFld.mac      "fine" weather only. Same blank map as 4.1's.
 echo.                                  
 echo --EDF 4.1--                       
-echo app:/Map/NW_HillyCity_Light.mac   City with train station, construction sites, and tennis courts.
-echo app:/Map/NW_Kasenjiki01.mac       Very long residential area with a riverbed.
-echo app:/Map/NW_KousouBld01.mac       High-rise district with a park.
-echo app:/Map/NW_Sinsuikouen.mac       City and town divided by a water park.
-echo app:/Map/NW_Soukogai01.mac        Coastal port of many warehouses.
-echo app:/Map/IG_WreckTown01.mac       Pre-destroyed city.
-echo app:/Map/SK_Heigen02.mac          Map of the grassy plains.
-echo app:/Map/SK_Kaigan01.mac          Map of the beach.
-echo app:/Map/SK_Sangaku01.mac         Mountain range of valleys.
-echo app:/Map/SK_Sangaku02.mac         Mountain range with a center hill.
-echo app:/Map/SK_StepMountain01.mac    Mountain road.
-echo app:/Map/SK_Valley01.mac          Valley with a single bridge.
-echo app:/Map/SK_Crater01.mac          Map of a large crater.
-echo app:/Map/NW_Underground01.mac     "fine" weather only. Caves found inside subway tunnels.
-echo app:/Map/IG_Cave01.mac            "fine" weather only. Caves with green-ish walls.
-echo app:/Map/IG_HornetCave01.mac      "fine" weather only. Deep insides of a hornet's nest.
-echo app:/Map/IG_TestLightMap.mac      Resource-light, somewhat empty test city. Low LOD settings.
-echo app:/Map/IG_Test_BlueFld.mac      "fine" weather only. Completely blank map with a mucky green background.
+echo /Map/NW_HillyCity_Light.mac   City with train station, construction sites, and tennis courts.
+echo /Map/NW_Kasenjiki01.mac       Very long residential area with a riverbed.
+echo /Map/NW_KousouBld01.mac       High-rise district with a park.
+echo /Map/NW_Sinsuikouen.mac       City and town divided by a water park.
+echo /Map/NW_Soukogai01.mac        Coastal port of many warehouses.
+echo /Map/IG_WreckTown01.mac       Pre-destroyed city.
+echo /Map/SK_Heigen02.mac          Map of the grassy plains.
+echo /Map/SK_Kaigan01.mac          Map of the beach.
+echo /Map/SK_Sangaku01.mac         Mountain range of valleys.
+echo /Map/SK_Sangaku02.mac         Mountain range with a center hill.
+echo /Map/SK_StepMountain01.mac    Mountain road.
+echo /Map/SK_Valley01.mac          Valley with a single bridge.
+echo /Map/SK_Crater01.mac          Map of a large crater.
+echo /Map/NW_Underground01.mac     "fine" weather only. Caves found inside subway tunnels.
+echo /Map/IG_Cave01.mac            "fine" weather only. Caves with green-ish walls.
+echo /Map/IG_HornetCave01.mac      "fine" weather only. Deep insides of a hornet's nest.
+echo /Map/IG_TestLightMap.mac      Resource-light, somewhat empty test city. Low LOD settings.
+echo /Map/IG_Test_BlueFld.mac      "fine" weather only. Completely blank map with a mucky green background.
+goto loop
+
+:MDBp
+echo Opening default browser to webpage
+start "" https://github.com/BlueAmulet/blender-mdb-addon
 goto loop
 
 ::=================================================================
@@ -414,6 +428,16 @@ goto loop
 :MAC
 echo Opening Map editor : To go back, Close and reopen this file
 "%address%\MACfileTool_v1.0.0.exe" "%%~dpnxa"
+goto loop
+
+:MACVIEW
+echo comming soon . . .
+::"%address%\EDF-MDB-VIEWER.exe"
+goto loop
+
+:MissionEditor
+echo comming soon . . .
+::"%address%\EDF-MissionEditor.exe"
 goto loop
 
 :BVMdoc
@@ -482,6 +506,48 @@ echo ---------------------^|--------------------------------^|------------------
 echo. 
 echo If you have an account on zenhax, can you go to this link "https://zenhax.com/viewtopic.php?f=9&t=1005" and post these two
 echo AES keys above to add support on the Unreal Engine 4 pak-file Unpacker by Haoose, thanks in advance.
+goto loop
+
+::=================================================================
+
+:EGG
+:: set /easteregg rnd=%RANDOM% * 2 / 32768 + 1
+
+echo TO SAVE OUR MOTHER EARTH FROM ANY ALIEN ATTACK,
+Timeout /t 3 /nobreak >nul
+echo FROM VICIOUS GIANT INSECTS WHO HAVE ONCE AGAIN COME BACK,
+Timeout /t 4 /nobreak >nul
+echo WE'LL UNLEASE ALL OUR FORCES, 
+Timeout /t 2 /nobreak >nul 
+echo WE WON'T CUT THEM ANY SLACK,
+Timeout /t 4 /nobreak >nul
+echo.
+echo THE E.D.F. DEPLOYS!
+echo.
+Timeout /t 3 /nobreak >nul
+echo OUR SOLDERS ARE PREPARED FOR ANY ALIEN THREATS,
+Timeout /t 3 /nobreak >nul
+echo THE NAVY LAUNCHES SHIPS, 
+Timeout /t 2 /nobreak >nul 
+echo THE AIR FORCE SENDS THEIR JETS,
+Timeout /t 3 /nobreak >nul
+echo AND NOTHING CAN WITHSTAND OUR FIXED BAYONETTES,
+Timeout /t 4 /nobreak >nul
+echo.
+echo THE E.D.F. DEPLOYS!
+echo.
+Timeout /t 3 /nobreak >nul
+echo OUR FORCES NOW HAVE DWINDLED AND WE PULL BACK TO REGROUP,
+Timeout /t 4 /nobreak >nul
+echo THE ENEMY HAS MULIPLIED AND FORMED A MASSIVE GROUP,
+Timeout /t 4 /nobreak >nul
+echo WE BETTER BEAT THESE BUGS BEFORE WE'ER ALL TURENED TO SOUP,
+Timeout /t 4 /nobreak >nul
+echo.
+echo THE E.D.F. DEPLOYS!
+echo.
+Timeout /t 3 /nobreak >nul
+:: echo %easteregg%
 goto loop
 
 ::=================================================================
