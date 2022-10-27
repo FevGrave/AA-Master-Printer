@@ -28,7 +28,8 @@ You will need to get [BlueAmulet's Mod Loader](https://github.com/BlueAmulet/EDF
 After this the first thing you will need to do is to edit the AA-UserSettings-Porter.txt file to keep your preferred setting to apply to 
 the newer vertions of AA-Master-Printer.bat. the only thing you can edit with out issue is between the single quotes 'A example!'
 Once done editing the txt file you will save the changes. Then double click the AB-Python-Script-Runner.bat to run it, after this
-AA-Master-Printer.bat has been updated with the changes, and this "AA-Master-Printer.bat" file can be copied about, to anywhere that you want to start moding the game
+AA-Master-Printer.bat has been updated with the changes, and this "AA-Master-Printer.bat" file can be copied about, to anywhere in the
+unpacked cpk folders that you want to start moding the game
 
 
 
@@ -56,54 +57,51 @@ AA-Master-Printer.bat has been updated with the changes, and this "AA-Master-Pri
 ## CREDITS TO THE TOOL CREATORS WITH NOTES THEY NEED HELP WITH
 
 
-aelbannan#1388           - Aelbannans Direct SGO Editor                          
+aelbannan#1388               - Aelbannans Direct SGO Editor                          
 
-AUK A.K.A. C1CTWC        - Contributions to EDF Tools
+AUK (A.K.A.) C1CTWC          - Contributions to EDF Tools
 
-Big Racer#2799           - Maker of Big Racer's Weapon Builder
-                           No longer supports tool & Has Listed Unfinished Features Bellow
-                                 "Not sure if that's a comprehensive list of what needed to be fixed or finished"
-                                 - There's also a lot of info on the ammo class custom parameters that isn't on the wiki
-                                 - Import & export weapons
-                                 - Wing diver weapon support (energy, weapon charge scaling parameters)
-                                 - Figure out fencer shields and heavy weapon inertia parameters
-                                 - Fencer melee weapons (I think I mostly figured them out)
-                                 - Accessories
-                                 - Bikes (pain)
-                                 - Plane airstrikes
-                                 - Firing animations
-                                 - Use-underground is actually for audio stuff not the actual variable to spawn underground
+Big Racer#2799               - Maker of Big Racer's Weapon Builder
+                               No longer supports tool & Has Listed Unfinished Features Bellow
+                                     "Not sure if that's a comprehensive list of what needed to be fixed or finished"
+                                     - There's also a lot of info on the ammo class custom parameters that isn't on the wiki
+                                     - Import & export weapons
+                                     - Wing diver weapon support (energy, weapon charge scaling parameters)
+                                     - Figure out fencer shields and heavy weapon inertia parameters
+                                     - Fencer melee weapons (I think I mostly figured them out)
+                                     - Accessories
+                                     - Bikes (pain)
+                                     - Plane airstrikes
+                                     - Firing animations
+                                     - Use-underground is actually for audio stuff not the actual variable to spawn underground
    
-BlueAmulet#0168          - Contributions to EDF Tools, & AA-Master-Printer.bat          
+BlueAmulet#0168              - Contributions to EDF Tools, & AA-Master-Printer          
 
-FevGrave#5156            - Maker of AA-Master-Printer.bat, AB-Python-Script-Runner.bat, AA-UserSettings-Porter.txt,
-                           & Who wrote this (Read Me.txt) out.
+FevGrave#5156                - Maker of AA-Master-Printer.bat, AB-Python-Script-Runner.bat, AA-UserSettings-Porter.txt,
+                               & Who wrote this (Read Me.txt) out.
 
-KittopiaCreator#5577     - Maker of EDF Tools                                    
+KittopiaCreator#5577         - Maker of EDF Tools                                    
 
-Souzooka#0188            - Contributions to EDF Tools                            
+Souzooka#0188                - Contributions to EDF Tools                            
 
-stafern#3341             - Maker of MACfileTool                                  
-                           "The tool has not been updated since its release. The reason is that further development would require
-                           knowledge of other formats (MDB, RAB), which I don't know much about, and I have little experience in
-                           programming itself. However, this is not much of a tool, as it is just a tool that is a part of the
-                           information on the wiki. I am hoping that someday someone with more knowledge will make a proper one
-                           that works with Blender, etc."
+stafern#3341                 - Maker of MACfileTool                                  
+                              "The tool has not been updated since its release. The reason is that further development would require
+                              knowledge of other formats (MDB, RAB), which I don't know much about, and I have little experience in
+                              programming itself. However, this is not much of a tool, as it is just a tool that is a part of the
+                              information on the wiki. I am hoping that someday someone with more knowledge will make a proper one
+                              that works with Blender, etc."
 
-ゆづる#3689 A.K.A. Lizard  - Maker of Direct RAB editor
+ゆづる#3689 (A.K.A.) Lizard  - Maker of Direct RAB editor
 
-Zeddy#6581               - Maker of Sgott
+Zeddy#6581                   - Maker of Sgott
 
 ??????NO PERMISION YET REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 ??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
-
-s.#8549                  - Maker of Another EDF Tools and mission_tools_1.62.exe,
-                            No longer supports tool?
-                            I have attempted to reach out for contact no response
-                            
-eterniti A.K.A. eternity - Maker of E.A.T. 
-                           I have attempted to reach out for contact but this website https://videogamemods.com/xenoverse/register/
-                           is not allowing me to create a account
-                         - HAS YET TO SUPPORT HIS E.A.T. PACKAGE ON HIS GITHUB https://github.com/eterniti
-                         
+s.#8549                      - Maker of Another EDF Tools and mission_tools_1.62.exe,
+                               No longer supports tool?
+                               I have attempted to reach out for contact no response
+eterniti (A.K.A.) eternity   - Maker of E.A.T. 
+                               I have attempted to reach out for contact but this website https://videogamemods.com/xenoverse/register/
+                               is not allowing me to create a account
+                             - HAS YET TO SUPPORT HIS E.A.T. PACKAGE ON HIS GITHUB https://github.com/eterniti
 ??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
