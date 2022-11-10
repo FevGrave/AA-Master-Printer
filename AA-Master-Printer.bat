@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-TITLE V 1.0.343.15.9 --- A-Master-Printer --- by FevGrave#5156 --- %time%
+TITLE V 1.0.343.15.10 --- A-Master-Printer --- by FevGrave#5156 --- %time%
 
 ::=================================================================
 
@@ -18,6 +18,7 @@ echo 2. (RMPA) (BVM) (MAC) Options           - Missions files ^& Map Layout Edit
 echo 3. (ACB) (AWE) (AWB) Options            - Audio Extraction ^& Replacement
 echo 4. Specialty One Window Editors         - For Quick Access Tools
 echo 5. UE AES Keys                          - Keys ^& Info to get in UE-based games
+echo 6. Batch Controls                       - repeats file movement or mass delete of file type
 echo.
 set a=0
 set x=69420
@@ -35,8 +36,9 @@ if %x% == 2 goto listRMPABVMMAC
 if %x% == 3 goto listAudio
 if %x% == 4 goto listALLinONE
 if %x% == 5 goto UE-keys
+if %x% == 6 goto ListBatchCmdHelper
 if %x% == EGG goto EGG
-if %x% GEQ 6 goto invalid
+if %x% GEQ 7 goto invalid
 
 ::=================================================================
 
@@ -176,6 +178,9 @@ echo 1. Edit (SGO)                           - SGO Editor
 echo 2. Build a gun with a GUI               - Big Racer's Weapon Builder
 echo 3. (ACB)                                - Audio (E.A.T.)
 echo 4. Edit M(RAB)                          - Direct RAB editor
+
+
+
 set a=5
 set x=69420
 set /p x=Enter a number to mess with that file type: 
@@ -195,6 +200,31 @@ if %x% GEQ 5 goto invalid
 
 ::=================================================================
 
+:ListBatchCmdHelper
+echo -1. Exit Program                        - Close this application
+echo 0. Go back to starting menu             - Go Back
+echo 1. Delete by File Type                  - 
+echo 2. Move files from A to B               - 
+
+
+
+set a=6
+set x=69420
+set /p x=Enter a number to mess with that file type: 
+echo.
+echo.
+echo.
+echo.
+echo.
+
+if %x% == -1 goto exit
+if %x% == 0 goto list
+if %x% == 1 goto FileKiller
+if %x% == 2 goto FileMover
+if %x% GEQ 3 goto invalid
+
+:==================================================================
+
 :invalid
 echo.
 echo Needs To Be An Actual Input                                                                     -STOP
@@ -209,6 +239,7 @@ if %a% == 2 goto listm-rab
 if %a% == 3 goto listRMAPBVMMAC
 if %a% == 4 goto listAudio
 if %a% == 5 goto listALLinONE
+if %a% == 6 goto ListBatchCmdHelper
 
 ::=================================================================
 
@@ -227,6 +258,7 @@ if %b% == 2 goto listm-rab
 if %b% == 3 goto listRMAPBVMMAC
 if %b% == 4 goto listAudio
 if %b% == 5 goto listALLinONE
+if %b% == 6 goto ListBatchCmdHelper
 
 ::=================================================================
 
@@ -510,8 +542,28 @@ goto loop
 
 ::=================================================================
 
+:FileKiller
+set /p extention=Enter file type as text: 
+for /r "%CD%" %%a in (*.%extention%) do DEL *.%extention%
+echo Deleted . . . at: & time /t
+goto loop
+
+:FileMover
+echo comming soon
+goto loop
+set DFS=0
+set /p Source=What file?:
+if %DFS% == 1 goto DFSL
+set /p Destination=Where To Place the file?:
+set DFS = 1
+:DFSL
+move %Source% *.* %Destination%
+set /p choose=Have another file to move?:
+goto loop
+
+:==================================================================
+
 :EGG
-:: set /easteregg rnd=%RANDOM% * 2 / 32768 + 1
 
 echo TO SAVE OUR MOTHER EARTH FROM ANY ALIEN ATTACK,
 Timeout /t 3 /nobreak >nul
@@ -546,8 +598,6 @@ Timeout /t 4 /nobreak >nul
 echo.
 echo THE E.D.F. DEPLOYS!
 echo.
-Timeout /t 3 /nobreak >nul
-:: echo %easteregg%
 goto loop
 
 ::=================================================================
