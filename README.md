@@ -1,5 +1,5 @@
 # DOWNLOAD LINK
-https://github.com/FevGrave/AA-Master-Printer/releases/tag/1.0.343.15.10/TOOLS.zip
+https://github.com/FevGrave/AA-Master-Printer/releases/download/1.0.343.15.10/TOOLS.zip
 
 ## REQUIERMENTS
 Any text editor
