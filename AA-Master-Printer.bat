@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-TITLE V 1.0.343.15.10 --- A-Master-Printer --- by FevGrave#5156 --- %time%
+TITLE V 1.0.343.15.13 --- A-Master-Printer --- by FevGrave#5156 --- %time%
 
 ::=================================================================
 
@@ -82,11 +82,13 @@ echo 0. Go back to starting menu             - Go Back
 echo 1. M(RAB) Open Single Folder            - Model ^& Textures
 echo 2. M(RAB) Press-Hold Any key if used    - Model ^& Textures (Every file will be opened to an explorable folder)
 echo 3. M(RAB) Stitch Single Folder          - Model ^& Textures
-echo 4. Edit M(RAB)                          - Direct RAB editor
-echo 5. (EXR) TO (DDS)                       - Converting Script
-echo 6. I just need images in a format       - Recommended format for modding (EXR) {I'm BUGGY / "slow" on some stuff}
-echo 7. Print Map Notes
-echo 8. Blender MDB plugin
+echo 4. (MDB) TO (XML)                       - Game asset to 3DS Max import
+echo 5. (XML) TO (MDB)                       - 3DS Max export to Game asset
+echo 6. Edit M(RAB)                          - Direct RAB editor
+echo 7. (EXR) TO (DDS)                       - Converting Script
+echo 8. I just need images in a format       - Recommended format for modding (EXR) {I'm BUGGY / "slow" on some stuff}
+echo 9. Print Map Notes
+echo 10. Blender MDB plugin
 set a=2
 set x=69420
 set /p x=Enter a number to mess with that file type: 
@@ -101,12 +103,14 @@ if %x% == 0 goto list
 if %x% == 1 goto m-rab-printerSf
 if %x% == 2 goto m-rab-printer
 if %x% == 3 goto m-rab-stitcher
-if %x% == 4 goto rab-editor
-if %x% == 5 goto dds-printer
-if %x% == 6 goto image-printer
-if %x% == 7 goto m-notes
-if %x% == 8 goto MDBp
-if %x% GEQ 9 goto invalid
+if %x% == 4 goto mdb-xml
+if %x% == 5 goto xml-mdb
+if %x% == 6 goto rab-editor
+if %x% == 7 goto dds-printer
+if %x% == 8 goto image-printer
+if %x% == 9 goto m-notes
+if %x% == 10 goto MDBp
+if %x% GEQ 11 goto invalid
 
 ::=================================================================
 
@@ -152,7 +156,7 @@ if %x% GEQ 11 goto invalid
 :listAudio
 echo -1. Exit Program                        - Close this application
 echo 0. Go back to starting menu             - Go Back
-echo 1. (AWB) ^& (AWE)                        - Audio (Another EDF Tools) {BROKEN, but works for 5}
+echo 1. (AWE) ^& (AWB)                        - Audio (Another EDF Tools)
 echo 2. (ACB)                                - Audio (E.A.T.)
 set a=4
 set x=69420
@@ -332,6 +336,16 @@ set /p c=Do you have another file to be Archived (Y/N)?:
 IF /I "%c%" NEQ "Y" GOTO loop
 goto m-rab-stitcher
 
+:mdb-xml
+for /r "%CD%" %%a in (*.mdb) do "%address%\BVM_Builder\EDF Tools.exe" "%%~dpnxa"
+echo Decrypting done . . . at: & time /t
+goto loop
+
+:xml-mdb
+for /r "%CD%" %%a in (*.xml) do "%address%\BVM_Builder\EDF Tools.exe" "%%~dpnxa"
+echo Decrypting done . . . at: & time /t
+goto loop
+
 :rab-editor
 echo comming soon
 :: "%address%\Direct RAB editor\Direct RAB editor.exe"
@@ -344,10 +358,13 @@ goto loop
 
 :image-printer
 echo Supported Formats = http://imagemagick.sourceforge.net/http/www/formats.html
+set /p format=what file type is supplied?: 
 set /p cf=Expoting to which file type?: 
-for /r "%CD%" %%a in (*.dds) do magick mogrify -format %cf% *.dds
+for /r "%CD%" %%a in (*.%format%) do magick mogrify -format %cf% *.%format%
+echo Converting file was finished . . . at: & time /t
+set /p c=Do you have another file to be Archived (Y/N)?: 
+IF /I "%c%" NEQ "N" goto image-printer
 @DEL *~*
-echo Decrypting done . . . at: & time /t
 goto loop
 
 :m-notes
@@ -378,6 +395,8 @@ echo old_name-of-file.mdb              old structures?
 echo obj_name-of-file.mdb              Small objects?
 echo yy                                ?
 echo ym                                ?
+.                                  
+echo --EDF 6--   
 echo.                                  
 echo --EDF 5--                         
 echo /Map/IG_2000MCity.mac         Very large city of skyscrapers.
@@ -441,11 +460,11 @@ for /r "%CD%" %%a in (*.json, *.asm) do "%address%\mission_tools_1.62.exe" "%%~d
 goto loop
 
 :bvmtxt
-for /r "%CD%" %%a in (*.bvm) do "%address%\BVM_Builder\EDF Tools_22H301.exe" "%%~dpnxa"
+for /r "%CD%" %%a in (*.bvm) do "%address%\BVM_Builder\EDF Tools.exe" "%%~dpnxa"
 goto loop
 
 :txtbvm
-for /r "%CD%" %%a in (*.txt) do "%address%\BVM_Builder\EDF Tools_22H301.exe" "%%~dpnxa"
+for /r "%CD%" %%a in (*.txt) do "%address%\BVM_Builder\EDF Tools.exe" "%%~dpnxa"
 goto loop
 
 :addresses
@@ -485,8 +504,9 @@ goto loop
 ::=================================================================
 
 :AW~
-echo Opening Python Script : To go back, press enter 3 times
-python "%address%\Another EDF Tools\awe_parser.py" "%%~dpnxa"
+set /p awe=Enter the awe file: 
+set /p awb=Enter the awb file: 
+python "%address%\Another EDF Tools\awe_parser.py" %awe% %awb%
 goto loop
 
 :ACB
