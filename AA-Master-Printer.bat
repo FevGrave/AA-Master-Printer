@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-TITLE V 1.0.343.15.13 --- A-Master-Printer --- by FevGrave#5156 --- %time%
+TITLE V 1.0.343.17 --- A-Master-Printer --- by FevGrave#5156 --- %time%
 
 ::=================================================================
 
@@ -17,17 +17,17 @@ echo 1. M(RAB) Options                       - Model ^& Textures
 echo 2. (RMPA) (BVM) (MAC) Options           - Missions files ^& Map Layout Editor
 echo 3. (ACB) (AWE) (AWB) Options            - Audio Extraction ^& Replacement
 echo 4. Specialty One Window Editors         - For Quick Access Tools
-echo 5. UE AES Keys                          - Keys ^& Info to get in UE-based games
+echo 5. UE AES Keys                          - Keys ^& Info to get in Unreal Engine-based games
 echo 6. Batch Controls                       - repeats file movement or mass delete of file type
-echo.
+echo:
 set a=0
 set x=69420
 set /p x=Enter a number to mess with that file type: 
-echo.
-echo.
-echo.
-echo.
-echo.
+echo:
+echo:
+echo:
+echo:
+echo:
 
 if %x% == -1 goto exit
 if %x% == 0 goto listSGO
@@ -50,17 +50,17 @@ echo 2. (SGO) TO (JSON)                      - Converting Script
 echo 3. (JSON) TO (SGO)                      - Converting Script
 echo 4. Edit (SGO)                           - SGO Editor
 echo 5. Build a gun with a GUI               - Big Racer's Weapon Builder
-echo 6. (SGO) documentation
-echo 7. 4.1's Weapon List
-echo 8. 5's Weapon List
+echo 6. (SGO) documentation                  -
+echo 7. 4.1's Weapon List                    -
+echo 8. 5's Weapon List                      -
 set a=1
 set x=69420
 set /p x=Enter a number to mess with that file type: 
-echo.
-echo.
-echo.
-echo.
-echo.
+echo:
+echo:
+echo:
+echo:
+echo:
 
 if %x% == -1 goto exit
 if %x% == 0 goto list
@@ -87,16 +87,16 @@ echo 5. (XML) TO (MDB)                       - 3DS Max export to Game asset
 echo 6. Edit M(RAB)                          - Direct RAB editor
 echo 7. (EXR) TO (DDS)                       - Converting Script
 echo 8. I just need images in a format       - Recommended format for modding (EXR) {I'm BUGGY / "slow" on some stuff}
-echo 9. Print Map Notes
-echo 10. Blender MDB plugin
+echo 9. Print Map Notes                      -
+echo 10. Blender MDB plugin                  -
 set a=2
 set x=69420
 set /p x=Enter a number to mess with that file type: 
-echo.
-echo.
-echo.
-echo.
-echo.
+echo:
+echo:
+echo:
+echo:
+echo:
 
 if %x% == -1 goto exit
 if %x% == 0 goto list
@@ -121,20 +121,19 @@ echo 1. (RMPA) ^& (BVM) TO (JSON) ^& (ASM)     - Converting Script
 echo 2. (JSON) ^& (ASM) TO (RMPA) ^& (BVM)     - Converting Script
 echo 3. (BVM) TO (TXT)                       - BVM Builder Script
 echo 4. (TXT) TO (BVM)                       - BVM Builder Script
-echo 5. Print Useful Addresses Notes For (BVM-ASM)    
-echo 6. (MAC)                                - Map Layout Editor
-echo 7. (MAC) Viewer                         - View the maps in a 3D space 
-echo 8. Mission Editor Viewer                - Mission Editor
-echo 9. (BVM) documentation
-echo 10. (RMPA) documentation
+echo 5. (MAC)                                - Map Layout Editor
+echo 6. (MAC) Viewer                         - View the maps in a 3D space 
+echo 7. Mission Editor Viewer                - Mission Editor
+echo 8. (BVM) documentation                  -
+echo 9. (RMPA) documentation                 -
 set a=3
 set x=69420
 set /p x=Enter a number to mess with that file type: 
-echo.
-echo.
-echo.
-echo.
-echo.
+echo:
+echo:
+echo:
+echo:
+echo:
 
 if %x% == -1 goto exit
 if %x% == 0 goto list
@@ -142,13 +141,12 @@ if %x% == 1 goto RMPABVM
 if %x% == 2 goto JsonAsm
 if %x% == 3 goto bvmtxt
 if %x% == 4 goto txtbvm
-if %x% == 5 goto addresses
-if %x% == 6 goto MAC
-if %x% == 7 goto MACVIEW
-if %x% == 8 goto MissionEditor
-if %x% == 9 goto BVMdoc
-if %x% == 10 goto RMPAdoc
-if %x% GEQ 11 goto invalid
+if %x% == 5 goto MAC
+if %x% == 6 goto MACVIEW
+if %x% == 7 goto MissionEditor
+if %x% == 8 goto BVMdoc
+if %x% == 9 goto RMPAdoc
+if %x% GEQ 10 goto invalid
 
 
 ::=================================================================
@@ -161,11 +159,11 @@ echo 2. (ACB)                                - Audio (E.A.T.)
 set a=4
 set x=69420
 set /p x=Enter a number to mess with that file type: 
-echo.
-echo.
-echo.
-echo.
-echo.
+echo:
+echo:
+echo:
+echo:
+echo:
 
 if %x% == -1 goto exit
 if %x% == 0 goto list
@@ -188,11 +186,11 @@ echo 4. Edit M(RAB)                          - Direct RAB editor
 set a=5
 set x=69420
 set /p x=Enter a number to mess with that file type: 
-echo.
-echo.
-echo.
-echo.
-echo.
+echo:
+echo:
+echo:
+echo:
+echo:
 
 if %x% == -1 goto exit
 if %x% == 0 goto list
@@ -215,11 +213,11 @@ echo 2. Move files from A to B               -
 set a=6
 set x=69420
 set /p x=Enter a number to mess with that file type: 
-echo.
-echo.
-echo.
-echo.
-echo.
+echo:
+echo:
+echo:
+echo:
+echo:
 
 if %x% == -1 goto exit
 if %x% == 0 goto list
@@ -230,12 +228,12 @@ if %x% GEQ 3 goto invalid
 :==================================================================
 
 :invalid
-echo.
+echo:
 echo Needs To Be An Actual Input                                                                     -STOP
-echo.
-echo.
-echo.
-echo.
+echo:
+echo:
+echo:
+echo:
 
 if %a% == 0 goto list
 if %a% == 1 goto listSGO
@@ -249,7 +247,7 @@ if %a% == 6 goto ListBatchCmdHelper
 
 ::Loops with spaces
 :loop
-echo.
+echo:
 set /a loop=%loop%+1 
 if "%loop%"=="5" goto Break
 goto loop
@@ -268,7 +266,7 @@ if %b% == 6 goto ListBatchCmdHelper
 
 :search
 set /p SEARCH=Name to the gun or equipment: 
-echo.
+echo:
 echo File's that may have this: 
 FINDSTR /I /M %SEARCH% *.json
 goto loop
@@ -329,9 +327,9 @@ goto loop
 set /p cf=Enter folder name: 
 "%address%\Unnamed EDF Tool\Release\EDF Tools.exe" /ARCHIVE %cf% "%%~dpnxa"
 echo Encrypting done . . . at: & time /t
-echo.
-echo.
-echo.
+echo:
+echo:
+echo:
 set /p c=Do you have another file to be Archived (Y/N)?: 
 IF /I "%c%" NEQ "Y" GOTO loop
 goto m-rab-stitcher
@@ -353,18 +351,20 @@ goto loop
 
 :dds-printer
 for /r "%CD%" %%a in (*.exr) do magick mogrify -format dds *.exr
+@DEL *~*
 echo Decrypting done . . . at: & time /t
 goto loop
 
 :image-printer
+::this cmd is messy with making copy images with ~ in the extensions
 echo Supported Formats = http://imagemagick.sourceforge.net/http/www/formats.html
 set /p format=what file type is supplied?: 
 set /p cf=Expoting to which file type?: 
 for /r "%CD%" %%a in (*.%format%) do magick mogrify -format %cf% *.%format%
 echo Converting file was finished . . . at: & time /t
+@DEL *~*
 set /p c=Do you have another file to be Archived (Y/N)?: 
 IF /I "%c%" NEQ "N" goto image-printer
-@DEL *~*
 goto loop
 
 :m-notes
@@ -375,29 +375,29 @@ echo cloudy
 echo cloudy2
 echo evening
 echo sunset
-echo.
+echo:
 echo --Headers file meanings--
-echo name-of-file.mdb                  Is the normal object
-echo name-of-file_gr.mdb               Is the ground destroyed object
-echo name-of-file_hk.mdb               Is the fragmented version of the model
-echo name-of-file_lod.mdb              Is the lower level of detail object
-echo name-of-file_lod2.mdb             Is the lowest level of detail object
-echo name-of-file{number}m             Is the size of the object in meters
-echo name-of-file_1f.mdb               First floor of building
-echo name-of-file_c.mdb                Middel floor of building
-echo name-of-file_top.mdb              Top floor of building
-echo trc_name-of-file.mdb              Meshes from TrainCity map
-echo sk_name-of-file.mdb               Outdoor meshes?
-echo dan_name-of-file.mdb              Meshes from Danti map
-echo hen_name-of-file.mdb              Meshes from Henden map
-echo ktg_name-of-file.mdb              Meshes from Kitagun map
-echo old_name-of-file.mdb              old structures?
-echo obj_name-of-file.mdb              Small objects?
-echo yy                                ?
-echo ym                                ?
-.                                  
+echo name-of-file.mdb              Is the normal object
+echo name-of-file_gr.mdb           Is the ground destroyed object
+echo name-of-file_hk.mdb           Is the fragmented version of the model
+echo name-of-file_lod.mdb          Is the lower level of detail object
+echo name-of-file_lod2.mdb         Is the lowest level of detail object
+echo name-of-file{number}m         Is the size of the object in meters
+echo name-of-file_1f.mdb           First floor of building
+echo name-of-file_c.mdb            Middel floor of building
+echo name-of-file_top.mdb          Top floor of building
+echo trc_name-of-file.mdb          Meshes from TrainCity map
+echo sk_name-of-file.mdb           Outdoor meshes?
+echo dan_name-of-file.mdb          Meshes from Danti map
+echo hen_name-of-file.mdb          Meshes from Henden map
+echo ktg_name-of-file.mdb          Meshes from Kitagun map
+echo old_name-of-file.mdb          old structures?
+echo obj_name-of-file.mdb          Small objects?
+echo yy                            ?
+echo ym                            ?
+echo:                                  
 echo --EDF 6--   
-echo.                                  
+echo:                                  
 echo --EDF 5--                         
 echo /Map/IG_2000MCity.mac         Very large city of skyscrapers.
 echo /Map/IG_Base502.mac           EDF base exterior in the grassy mountains.
@@ -422,7 +422,7 @@ echo /Map/NW_Suiden.mac            Large stretch of rice paddy fields.
 echo /Map/NW_TrainCity.mac         Skyscraper city divided by a line of many train tracks.
 echo /Map/IG_TestLightMap.mac      Resource-light, somewhat empty test city. Same one as 4.1's.
 echo /Map/IG_Test_BlueFld.mac      "fine" weather only. Same blank map as 4.1's.
-echo.                                  
+echo:                                  
 echo --EDF 4.1--                       
 echo /Map/NW_HillyCity_Light.mac   City with train station, construction sites, and tennis courts.
 echo /Map/NW_Kasenjiki01.mac       Very long residential area with a riverbed.
@@ -467,15 +467,6 @@ goto loop
 for /r "%CD%" %%a in (*.txt) do "%address%\BVM_Builder\EDF Tools.exe" "%%~dpnxa"
 goto loop
 
-:addresses
-echo #define LoadResource( 2C(0x0D,
-echo #define LoadMap( 2C(0x0E,
-echo #define SetMap( 2C(0x64,
-echo #define SpawnPlayer( 2C(0x3E8,
-echo #define PlayBGM( 2C(0x12C,
-echo #define FadeBGM( 2C(0x12D,
-goto loop
-
 :MAC
 echo Opening Map editor : To go back, Close and reopen this file
 "%address%\MACfileTool_v1.0.0.exe" "%%~dpnxa"
@@ -483,12 +474,13 @@ goto loop
 
 :MACVIEW
 echo comming soon . . .
-::"%address%\EDF-MDB-VIEWER.exe"
+:: "%address%\EDF-MDB-VIEWER.exe"
 goto loop
 
 :MissionEditor
-echo comming soon . . .
-::"%address%\EDF-MissionEditor.exe"
+echo Work in Progress Tool do double click this
+echo "%address%\EDF5-Debug-Room-Tool-main\run.bat"
+echo Don't forget to add the extra SGO's into the object folder & move the .RMPA file to your test mission
 goto loop
 
 :BVMdoc
@@ -514,48 +506,45 @@ if exist "%address%\EAT\eternity_audio_tool.exe" (
     set /p cf=Enter file name: 
     echo Opening EAT : To go back, Close and reopen this file
     "%address%\EAT\eternity_audio_tool.exe" %cf% "%%~dpnxa"
-    goto loop
-)
-    echo EAT is not detected . . . You will need to choose what version of EAT you want to unpack please go to this drive address
-    echo "%address%\EAT\"
-    goto loop
-
-:sound-notes
+    goto loop)
+echo EAT is not detected . . . You will need to choose what version of EAT you want to unpack please go to this drive address
+echo "%address%\EAT\"
+goto loop
 
 ::=================================================================
 
 :UE-keys
 echo This is the AES keys for the EDF Unreal Engine built games, Example Earth Defense ^| Iron Rain, World Brothers, And any future releases
-echo.
-echo.
+echo:
+echo:
 echo Pulling Model Assets? {https://www.gildor.org/en/projects/umodel}, right-click "All packages" then export folder content
 echo With blender usage in mind. 
-echo.
-echo.
+echo:
+echo:
 echo Skeletal ^& Mesh type has to be any option bellow
 echo (glTF 2.0)     Blender  (Blender has this installed by default)              (Recommended)
 echo                3DS MAX  (N/A or no info)                                     
-echo.                                                                             
-echo (MD5)                                                                        (it only exports the mesh only NOT Recommended)
-echo.                                                                             
+echo:                                                                             
+echo (MD5)          NOT Recommended NOT Recommended                               (it only exports the mesh only NOT Recommended)
+echo:                                                                            
 echo ActorX-(PSK)   Blender  (https://github.com/Befzz/blender3d_import_psk_psa)  (Recommended)
 echo                3DS MAX  (https://www.gildor.org/projects/unactorx)           (Recommended)
-echo.
+echo:
 echo And textures could be any option below (FYI EVERY IMAGE IMPORTED INTO BLENDER USE THE NON-COLOR OPTION IN THE COLOR SPACE)
 echo (TGA Uncompressed) Biggest, with good alpha layer,  (But why????????)
 echo (TGA)              Bigger, with a good alpha layer, (Recommend)
 echo (PNG)              Smaller, Poor alpha layer,       (Recommended)
-echo (DDS)              Smallest, "VG" compression,      (Blender DOES NOT SUPPORT DDS convert them to EXR(its included in this file))
-echo.
+echo (DDS)              Smallest, "VG" compression, Best (Blender DOES NOT SUPPORT DDS convert them to EXR(its included in this file package))
+echo:
 echo Game                 ^|UE_Version                      ^|AES keys                                                             ^|
 echo ---------------------^|--------------------------------^|---------------------------------------------------------------------^|
-echo EDF:IR               ^|{4.19}                          ^|0xCF812E306958EF92C90EA4F251994FE747306B7B666940FBE2ED711139EDB65E   ^|
+echo EDF:Iron Rain        ^|{4.19}                          ^|0xCF812E306958EF92C90EA4F251994FE747306B7B666940FBE2ED711139EDB65E   ^|
 echo ---------------------^|--------------------------------^|---------------------------------------------------------------------^|
-echo EDF:WB               ^|{4.24}                          ^|0x4055102382008C1D820548683D055CC84B03164B43EDF64A80629B384A4D8DA4   ^|
+echo EDF:World Brothers   ^|{4.24}                          ^|0x4055102382008C1D820548683D055CC84B03164B43EDF64A80629B384A4D8DA4   ^|
 echo ---------------------^|--------------------------------^|---------------------------------------------------------------------^|
-echo EDF:HQ               ^|                                ^|TO SAVE OUR MOTHER EARTH FROM ANY ALIEN ATTACK                       ^|
+echo EDF:                 ^|{}                              ^|0x                                                                   ^|
 echo ---------------------^|--------------------------------^|---------------------------------------------------------------------^|
-echo. 
+echo: 
 echo If you have an account on zenhax, can you go to this link "https://zenhax.com/viewtopic.php?f=9&t=1005" and post these two
 echo AES keys above to add support on the Unreal Engine 4 pak-file Unpacker by Haoose, thanks in advance.
 goto loop
@@ -569,22 +558,21 @@ echo Deleted . . . at: & time /t
 goto loop
 
 :FileMover
-echo comming soon
-goto loop
 set DFS=0
 set /p Source=What file?:
 if %DFS% == 1 goto DFSL
 set /p Destination=Where To Place the file?:
 set DFS = 1
+goto DFSL
 :DFSL
-move %Source% *.* %Destination%
-set /p choose=Have another file to move?:
+MOVE /-Y %Source% %Destination%
+set /p choose=Have another file to move? (y\n):
+IF /I "%choose%" NEQ "N" goto FileMover
 goto loop
 
 :==================================================================
 
 :EGG
-
 echo TO SAVE OUR MOTHER EARTH FROM ANY ALIEN ATTACK,
 Timeout /t 3 /nobreak >nul
 echo FROM VICIOUS GIANT INSECTS WHO HAVE ONCE AGAIN COME BACK,
@@ -593,9 +581,9 @@ echo WE'LL UNLEASE ALL OUR FORCES,
 Timeout /t 2 /nobreak >nul 
 echo WE WON'T CUT THEM ANY SLACK,
 Timeout /t 4 /nobreak >nul
-echo.
+echo:
 echo THE E.D.F. DEPLOYS!
-echo.
+echo:
 Timeout /t 3 /nobreak >nul
 echo OUR SOLDERS ARE PREPARED FOR ANY ALIEN THREATS,
 Timeout /t 3 /nobreak >nul
@@ -605,9 +593,9 @@ echo THE AIR FORCE SENDS THEIR JETS,
 Timeout /t 3 /nobreak >nul
 echo AND NOTHING CAN WITHSTAND OUR FIXED BAYONETTES,
 Timeout /t 4 /nobreak >nul
-echo.
+echo:
 echo THE E.D.F. DEPLOYS!
-echo.
+echo:
 Timeout /t 3 /nobreak >nul
 echo OUR FORCES NOW HAVE DWINDLED AND WE PULL BACK TO REGROUP,
 Timeout /t 4 /nobreak >nul
@@ -615,9 +603,9 @@ echo THE ENEMY HAS MULIPLIED AND FORMED A MASSIVE GROUP,
 Timeout /t 4 /nobreak >nul
 echo WE BETTER BEAT THESE BUGS BEFORE WE'ER ALL TURENED TO SOUP,
 Timeout /t 4 /nobreak >nul
-echo.
+echo:
 echo THE E.D.F. DEPLOYS!
-echo.
+echo:
 goto loop
 
 ::=================================================================
