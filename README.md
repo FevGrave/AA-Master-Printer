@@ -16,7 +16,9 @@ Imagemagik = https://imagemagick.org/script/download.php
 For these CMDs "EXR TO DDS" and "Convert to any image type" script
 
 Foobar2000
-https://www.foobar2000.org/download
+[https://www.foobar2000.org/download](https://www.foobar2000.org/download
+this can play AWB files but need an addon
+https://www.foobar2000.org/components/view/foo_input_vgmstream)
 
 
 
@@ -25,11 +27,10 @@ You will need to get [BlueAmulet's Mod Loader](https://github.com/BlueAmulet/EDF
 * [CriPakTools](https://github.com/wmltogether/CriPakTools): CPK extractor with a GUI.
 * [YACPKTool](https://github.com/Brolijah/YACpkTool): Drag and drop CPK extractor.
 
-After this the first thing you will need to do is to edit the AA-UserSettings-Porter.txt file to keep your preferred setting to apply to 
-the newer vertions of AA-Master-Printer.bat. the only thing you can edit with out issue is between the single quotes 'A example!'
-Once done editing the txt file you will save the changes. Then double click the AB-Python-Script-Runner.bat to run it, after this
-AA-Master-Printer.bat has been updated with the changes, and this "AA-Master-Printer.bat" file can be copied about, to anywhere in the
-unpacked cpk folders that you want to start moding the game
+After that the first thing you will need to do is to start the AA-UserSettings-Porter.bat file to settup a keep your preferred settings txt file to apply to 
+the newer versions of AA-Master-Printer.bat. after this AA-Master-Printer.bat has been updated with the changes, and this "AA-Master-Printer.bat" file can be copied about,
+to anywhere in the unpacked cpk folders that you want to start modding the game
+
 
 
 
