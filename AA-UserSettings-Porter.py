@@ -74,7 +74,7 @@ list_of_lines = a_file.readlines()
 a_file.close()
 
 list_of_lines[6] = "color " + background_color + text_color + "\n"
-list_of_lines[7] = "REM " + text_color_escape + "\n"
+list_of_lines[7] = "REM " + text_color_escape + " Reset's RED mess text color or any other colored words\n"
 
 default_value = "%esc%[92m"
 for i in range(len(list_of_lines)):
