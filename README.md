@@ -7,6 +7,7 @@ https://github.com/FevGrave/AA-Master-Printer/releases/download/1.0.343.20/Tools
 
 Before you begin the installation of the AA-Master-Printer toolset, ensure you have the following software installed on your computer:
 
+- **7-Zip**: Needed for unpacking This tool & E.A.T. versions. Download from [7-Zip's official site](https://www.7-zip.org/download.html).
 - **Python 3**: The scripts and tools within the AA-Master-Printer package are developed for Python 3. Ensure you have Python 3 installed on your system to run these scripts successfully. Download the latest version of Python 3 from [the official Python website](https://www.python.org/downloads/). During installation, remember to check the option to add Python to your system's PATH to make it easily accessible from the command line.
 
 ## 1. Setup and Configuration
@@ -25,7 +26,6 @@ While a text editor is no longer needed for the initial setup, it remains a valu
 
 For additional functionality, consider installing the following:
 
-- **7-Zip**: Needed for unpacking E.A.T. versions. Download from [7-Zip's official site](https://www.7-zip.org/download.html).
 - **ImageMagick**: Required for specific image conversion scripts. Get it from [ImageMagick's download page](https://imagemagick.org/script/download.php).
 - **Foobar2000**: This program can play A.W.B. files with an addon. Download Foobar2000 [here](https://www.foobar2000.org/download) and the addon [here](https://www.foobar2000.org/components/view/foo_input_vgmstream).
 
