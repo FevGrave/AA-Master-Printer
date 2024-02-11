@@ -29,11 +29,7 @@ For additional functionality, consider installing the following:
 - **ImageMagick**: Required for specific image conversion scripts. Get it from [ImageMagick's download page](https://imagemagick.org/script/download.php).
 - **Foobar2000**: This program can play A.W.B. files with an addon. Download Foobar2000 [here](https://www.foobar2000.org/download) and the addon [here](https://www.foobar2000.org/components/view/foo_input_vgmstream).
 
-## 4. Installation Steps
-
-(Detailed installation steps based on the revised section #1 information)
-
-## 5. Credits and Contributions
+## 3. Credits and Contributions
 
 A heartfelt thanks to all the tool creators and contributors in the modding community. Your tools and insights are invaluable:
 
@@ -70,6 +66,6 @@ A heartfelt thanks to all the tool creators and contributors in the modding comm
 
 We're always looking for help to improve these tools. If you're interested in contributing, please reach out or submit a pull request on GitHub.
 
-## 8. Legal and Usage Notice
+## 4. Legal and Usage Notice
 
 This toolset is provided for educational and personal use to enhance your gaming experience. Please mod responsibly and adhere to the game's terms of service. Remember to always back up your game files before making any modifications.
